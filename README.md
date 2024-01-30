@@ -12,7 +12,15 @@ Follow these steps to reproduce the issue:
  4. Run `npm run dev` to start Next.js dev server
  5. Visit http://localhost:3000/ in your browser to trigger middleware ([middleware.ts](/middleware.ts))
  6. Observe error in terminal and error overlay
-
+    ```
+     ⨯ middleware.ts (4:23) @ ModelName
+     ⨯ Cannot read properties of undefined (reading 'ModelName')
+      2 |
+      3 | export default function() {
+    > 4 |     console.log(Prisma.ModelName.User)
+        |                       ^
+      5 | }
+    ```
 
 ## How this repo was created
 
